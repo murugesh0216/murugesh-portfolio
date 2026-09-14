@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Murugesh R — Performance Marketing Specialist. Meta Ads, Google Ads, franchise lead generation, and analytics across South Asian markets.">
+  <title>Murugesh R — Performance Marketing Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="nav">
+    <div class="container navin">
+      <a class="brand" href="#home">Murugesh R <span class="dot"></span></a>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#work">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="btn secondary" onclick="scrollToId('contact')">Contact</button>
+        <button class="btn primary" onclick="toggleAdmin()">Admin</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="live"></span> Performance Marketing Specialist · Chennai, India</span>
+            <h1 id="heroTitle"></h1>
+            <p id="heroSummary"></p>
+            <div class="cta">
+              <button class="btn accentbtn" onclick="scrollToId('work')">View Projects</button>
+              <button class="btn secondary" onclick="scrollToId('contact')">Book a Strategy Call</button>
+            </div>
+            <div class="trust" id="heroPills"></div>
+          </div>
+          <div class="profile-wrap">
+            <div class="profile-frame">
+              <img id="profileImg" alt="Murugesh R">
+              <div class="photo-tools" id="photoTools">
+                <button class="icon-btn" title="Edit photo" onclick="editPhoto()">✎</button>
+                <button class="icon-btn del" title="Delete photo" onclick="deletePhoto()">🗑</button>
+              </div>
+            </div>
+            <div class="profile-badge">
+              <b id="badgeMetric">35K+</b>
+              <span>Leads generated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT & KEY STATS SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">About</span>
+            <h2>Performance marketing with strategic depth.</h2>
+          </div>
+          <p class="section-intro" id="aboutText"></p>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Services</span>
+            <h2>Specialized growth capabilities</h2>
+          </div>
+          <p class="section-intro">Practical, measurable paid-media execution — from multi-market strategy to creative localization and lead qualification.</p>
+        </div>
+        <div class="grid grid3" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- 4. RESULTS & BENCHMARKS SECTION -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Results</span>
+            <h2>Key performance benchmarks</h2>
+          </div>
+          <p class="section-intro">Selected outcome snapshots across regional acquisition and franchise campaigns.</p>
+        </div>
+        <div class="grid grid2" id="resultsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 5. FEATURED PROJECTS / CASE STUDIES -->
+    <section class="section alt" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Projects</span>
+            <h2>Featured case studies</h2>
+          </div>
+          <p class="section-intro">Detailed breakdowns of strategy, geographic localization, creative, and campaign optimization. Each study links the creative we ran.</p>
+        </div>
+        <div class="grid grid2" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. GROWTH PROCESS SECTION -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Process</span>
+            <h2>Growth methodology</h2>
+          </div>
+          <p class="section-intro">A structured framework connecting audience research, creative messaging, optimization, and sales outcomes.</p>
+        </div>
+        <div class="timeline" id="processGrid"></div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & LEAD INTAKE SECTION -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="tag">Contact</span>
+            <h2>Let's discuss your acquisition strategy.</h2>
+          </div>
+          <p class="section-intro">Share your target market, budget, and growth objectives — I'll respond with a plan.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Book a strategy call</h3>
+            <p class="muted">Ready to scale regional lead generation or optimize your performance campaigns? Reach out directly.</p>
+            <div class="cta">
+              <a id="emailLink" class="btn accentbtn" href="#">Email me</a>
+              <a id="linkedinLink" class="btn secondary" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+          <div class="card">
+            <form class="form" onsubmit="submitLead(event)">
+              <div>
+                <label for="leadName">Name</label>
+                <input id="leadName" required>
+              </div>
+              <div>
+                <label for="leadBusiness">Business / Website</label>
+                <input id="leadBusiness">
+              </div>
+              <div>
+                <label for="leadBudget">Monthly ad budget</label>
+                <select id="leadBudget">
+                  <option>Under ₹25K</option>
+                  <option>₹25K–₹50K</option>
+                  <option>₹50K–₹1L</option>
+                  <option>₹1L–₹5L</option>
+                  <option>₹5L+</option>
+                </select>
+              </div>
+              <div>
+                <label for="leadMessage">Project goals / questions</label>
+                <textarea id="leadMessage" required></textarea>
+              </div>
+              <button class="btn primary">Send enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand" id="footerName">Murugesh R <span class="dot"></span></div>
+          <p class="muted" style="margin:8px 0 0;">Meta Ads · Google Ads · Franchise Lead Generation · Analytics</p>
+        </div>
+        <div class="footer-links">
+          <a id="footerEmail" href="#">Email</a>
+          <a id="footerLinkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ADMIN CMS SIDEBAR PANEL -->
+  <div class="adminbar"><button class="btn primary" onclick="toggleAdmin()">⚙ Edit Portfolio</button></div>
+  <aside class="admin-panel" id="adminPanel">
+    <div class="admin-head">
+      <h3>Portfolio Admin</h3>
+      <button class="btn small secondary" onclick="toggleAdmin()">Close</button>
+    </div>
+    <p class="muted" style="font-size:.82rem;">Manage every section. Changes save automatically to this browser.</p>
+    <div class="admin-section"><button class="btn primary" style="width:100%;" onclick="editProfile()">Edit profile & photo</button></div>
+    <div class="admin-section"><b>Skills</b><div id="adminPills"></div><button class="btn small secondary" style="margin-top:8px;" onclick="addPill()">＋ Add skill</button></div>
+    <div class="admin-section"><b>Services</b><div id="adminServices"></div><button class="btn small secondary" style="margin-top:8px;" onclick="addService()">＋ Add service</button></div>
+    <div class="admin-section"><b>Case studies / projects</b><div id="adminProjects"></div><button class="btn accentbtn small" style="margin-top:8px;" onclick="addProject()">＋ Add project</button></div>
+    <div class="admin-section"><b>Results & metrics</b><div id="adminResults"></div><button class="btn small secondary" style="margin-top:8px;" onclick="addResult()">＋ Add metric</button></div>
+    <div class="admin-section"><b>Process steps</b><div id="adminProcess"></div><button class="btn small secondary" style="margin-top:8px;" onclick="addProcess()">＋ Add step</button></div>
+    <div class="admin-section"><button class="btn small danger" style="width:100%;" onclick="resetData()">Reset to default content</button></div>
+  </aside>
+
+  <!-- MODAL CONTAINER -->
+  <div class="modal" id="modal">
+    <div class="modalbox">
+      <button class="modalclose" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- APPLICATION SCRIPTS -->
+  <!-- EmailJS SDK — sends form submissions to Gmail without a server -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/emailjs-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
