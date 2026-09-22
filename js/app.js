@@ -1,4 +1,5 @@
 const $ = id => document.getElementById(id);
+const GMAIL_RECEIVER_EMAIL = "rmurugesh126@gmail.com";
 
 function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, m => ({
